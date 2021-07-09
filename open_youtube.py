@@ -8,7 +8,7 @@ from selenium import webdriver
 #linux with chromedriver downloaded and CHROME installed
 driver = webdriver.Chrome("/home/jbiden/Downloads/chromedriver")
 driver.get("http://www.youtube.com")
-
+driver.quit()
 # DO NOT FORGET TO INSTALL THIS
 # sudo pip install webdrivermanager
 # which webdrivermanager
