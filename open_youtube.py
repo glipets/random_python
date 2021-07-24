@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 from selenium import webdriver
-
+from selenium.webdriver.common.keys import Keys
 # leave for windows
 #chromedriver = "C:\\Users\\glipets\\Downloads\\chromedriver_win32\chromedriver.exe"
 # leave below for firefox
@@ -8,7 +8,10 @@ from selenium import webdriver
 #linux with chromedriver downloaded and CHROME installed
 driver = webdriver.Chrome("/home/jbiden/Downloads/chromedriver")
 driver.get("http://www.youtube.com")
-driver.quit()
+search = driver.find_element_by_id("search")
+search.send_keys('python')
+search.send_keys(Keys.ENTER)
+#driver.quit()
 # DO NOT FORGET TO INSTALL THIS
 # sudo pip install webdrivermanager
 # which webdrivermanager
