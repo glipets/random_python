@@ -1,9 +1,16 @@
 #!/usr/bin/env python3
 # 
 
-import bs4, requests
+import bs4, requests, sys
 from bs4.builder import HTML
-#from os import WIFCONTINUED
+
+
+try: 
+    file = open('case.txt') 
+    file.close
+except FileNotFoundError:
+    print("case.txt doesn't exist in the current directory")
+    sys.exit()
 
 
 with open('case.txt','r') as rf:
